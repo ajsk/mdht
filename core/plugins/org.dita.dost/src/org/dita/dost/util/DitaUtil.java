@@ -80,7 +80,7 @@ public class DitaUtil {
 	public static void validate(IPath tmpFileInWorkspaceDir) throws IOException, ParserConfigurationException,
 			SAXException, URISyntaxException {
 
-		// TODO delete commented out code which was used for debugging (debug code needs to stay at least two releases after 2.5.9)
+		// TODO delete commented out code which was used for debugging (debug code needs to stay at least two releases after 2.5.13)
 		// Get the XSD file
 		Bundle bundle = Platform.getBundle("org.dita.dost");
 		// Path ditaSchemadirPath = new Path("DITA-OT/schema/technicalContent/xsd/topic.xsd");
