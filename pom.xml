@@ -46,6 +46,31 @@
 		<module>cda/features</module>
 		<module>releng/sites</module>
 	</modules>
+	
+	<build>
+	<plugins>
+				     <!-- plugin to debug maven settings -->
+					 <plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.7</version>
+						<executions>
+							<execution>
+								<phase>validate</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<tasks>
+										<echoproperties />
+									</tasks>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					</plugins>
+	</build>
+	
 	<profiles>
 		<profile>
 			<id>mdht_build</id>
@@ -57,7 +82,9 @@
 				</repository>
 			</repositories>
 			<build>
-				<plugins>
+						<plugins>
+				
+				
 					<plugin>
 						<groupId>org.eclipse.tycho</groupId>
 						<artifactId>tycho-maven-plugin</artifactId>
